@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 
-class ClubDashboardActivity : AppCompat.AppCompatActivity() {
+class ClubDashboardActivity : androidx.appcompat.app.AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var reservationAdapter: ReservationAdapter

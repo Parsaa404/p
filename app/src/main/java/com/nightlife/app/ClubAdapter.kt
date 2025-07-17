@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.nightlife.domain.Club
 
 import android.content.Intent
-import com.nightlife.domain.Club
 
 class ClubAdapter(private val clubs: List<Club>) : RecyclerView.Adapter<ClubAdapter.ViewHolder>() {
 
