@@ -13,9 +13,8 @@ import com.nightlife.domain.Reservation
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import com.google.android.gms.tasks.Task
-import com.google.android.gms.tasks.Tasks
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.tasks.await
 
 class ClubDashboardActivity : AppCompatActivity() {
 
@@ -37,7 +36,7 @@ class ClubDashboardActivity : AppCompatActivity() {
             val reservations = firestore.collection("reservations")
                 .whereEqualTo("clubId", clubId)
                 .get()
-                .coroutinesAwait()
+                .await()
                 .toObjects(Reservation::class.java)
 
             withContext(Dispatchers.Main) {
